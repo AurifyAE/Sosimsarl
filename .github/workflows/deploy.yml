@@ -1,4 +1,4 @@
-name: Deploy Dipanjali Screen
+name: Deploy Sosimsarl Screen
 
 on:
   push:
@@ -31,16 +31,16 @@ jobs:
           VITE_APP_ADMIN_ID: ${{ secrets.VITE_APP_ADMIN_ID }}
           VITE_APP_SOCKET_SECRET_KEY: ${{ secrets.VITE_APP_SOCKET_SECRET_KEY }}
 
-      # 4. Prepare Dipanjali folder
-      - name: Prepare Dipanjali folder
+      # 4. Prepare Sosimsarl folder
+      - name: Prepare Sosimsarl folder
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            sudo mkdir -p /var/www/html/TV_Screens/Dipanjali
-            sudo chown -R ubuntu:ubuntu /var/www/html/TV_Screens/Dipanjali
+            sudo mkdir -p /var/www/html/TV_Screens/Sosimsarl
+            sudo chown -R ubuntu:ubuntu /var/www/html/TV_Screens/Sosimsarl
 
       # 5. Upload new build
       - name: Upload build files
@@ -50,7 +50,7 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           source: "dist/*"
-          target: "/var/www/html/TV_Screens/Dipanjali"
+          target: "/var/www/html/TV_Screens/Sosimsarl"
           strip_components: 1
 
       # 6. Fix permissions
@@ -61,8 +61,8 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            sudo find /var/www/html/TV_Screens/Dipanjali -type d -exec chmod 755 {} \;
-            sudo find /var/www/html/TV_Screens/Dipanjali -type f -exec chmod 644 {} \;
+            sudo find /var/www/html/TV_Screens/Sosimsarl -type d -exec chmod 755 {} \;
+            sudo find /var/www/html/TV_Screens/Sosimsarl -type f -exec chmod 644 {} \;
 
       # 7. Reload Nginx
       - name: Reload Nginx
