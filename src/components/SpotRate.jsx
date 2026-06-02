@@ -229,13 +229,6 @@ const SpotRate = () => {
 
     transition: "all 0.35s ease",
 
-    "&:hover": {
-      transform: "translateY(-3px)",
-      boxShadow: `
-        0 18px 45px rgba(0,0,0,0.55),
-        0 0 30px rgba(59,164,255,0.18)
-      `,
-    },
 
     // Premium Border
     "&::before": {

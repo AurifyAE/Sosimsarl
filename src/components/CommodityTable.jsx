@@ -34,8 +34,18 @@ const CommodityTable = ({ title, items }) => {
     return null;
   };
 
-  const purityFactor = (purity) =>
-    purity ? purity / 10 ** String(purity).length : 1;
+  // const purityFactor = (purity) =>
+  //   purity ? purity / 10 ** String(purity).length : 1;
+
+  // safe handling purity factor calculation for decimal purity values (like 999.9)
+  const purityFactor = (purity) => {
+    if (!purity) return 1;
+
+    const num = Number(purity);
+
+    return num > 1000 ? num / 10000 : num / 1000;
+  };
+
 
   const formatPrice = (value) => {
     if (value == null || isNaN(value)) return "—";
