@@ -12,7 +12,7 @@ import {
 } from "../api/api";
 import io from "socket.io-client";
 import { useSpotRate } from "../context/SpotRateContext";
-import mainLogo from "/images/logo.png";
+import mainLogo from "/images/logo.svg";
 import WorldClockHorizontal from "../components/WorldClock";
 import SystemClock from "../components/SystemClock";
 import PoweredByAurify from "../components/PoweredByAurify";
@@ -250,7 +250,7 @@ function TvScreen() {
         alignItems="center"
         width="100%"
       >
-       
+
         {/* Side: SpotRate & Date Time */}
         <Grid xs={12} md={6} padding="1vw" gap="1vw" display="grid">
           <WorldClockHorizontal />
@@ -259,7 +259,7 @@ function TvScreen() {
 
           <PoweredByAurify />
         </Grid>
- <Grid
+        <Grid
           xs={12}
           md={6}
           display="flex"

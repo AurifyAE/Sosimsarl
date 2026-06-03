@@ -418,7 +418,7 @@ const CommodityTable = ({ title, items }) => {
                     letterSpacing: "0.04em",
                   }}
                 >
-                  {getPurityLabel(row.purity)}
+                  {row.purity}
                 </Typography>
               </Typography>
 
