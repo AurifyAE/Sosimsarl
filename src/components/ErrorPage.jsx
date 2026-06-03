@@ -240,10 +240,9 @@ const ErrorPage = () => {
         <div className="ep-blob ep-blob--3" />
         <div className="ep-ring ep-ring--1" style={{ position: "absolute" }} />
         <div className="ep-ring ep-ring--2" style={{ position: "absolute" }} />
-
         <div className="ep-card">
           {/* Logo */}
-          <img src="/images/logo.png" alt="Logo" className="ep-logo" />
+          <img src="/images/logo.svg" alt="Logo" className="ep-logo" />
 
 
           {/* Devices illustration */}
