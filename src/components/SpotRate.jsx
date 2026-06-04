@@ -70,7 +70,7 @@ const PricePulse = ({ label, value, dir }) => {
             sm: "2.5vw", // small tablets
             md: "1.8vw", // laptops
             lg: "2.4vw", // desktop
-            xl: "2.4vw", // large screens
+            xl: "3vw", // large screens
           },
           fontWeight: 800,
           letterSpacing: "0.18vw",
