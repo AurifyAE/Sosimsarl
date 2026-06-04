@@ -118,10 +118,7 @@ const WorldClockHorizontal = () => {
               clock.key === clockConfig[clockConfig.length - 1].key
                 ? "none"
                 : "1px solid rgba(255, 211, 112, 0.22)",
-            "&:hover": {
-              background:
-                "linear-gradient(90deg, transparent, rgba(255, 189, 57, 0.08), transparent)",
-            },
+            
           }}
         >
           <Box

@@ -451,7 +451,7 @@ const CommodityTable = ({ title, items }) => {
                       textAlign: "center",
 
                       background:
-                        "linear-gradient(90deg,#FFF4CF,#D9B96F,#FFFFFF)",
+                        "linear-gradient(90deg,#FFF4CF,#F3E1B6,#FFFFFF)",
 
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
@@ -474,7 +474,7 @@ const CommodityTable = ({ title, items }) => {
                       textAlign: "center",
 
                       background:
-                        "linear-gradient(90deg,#FFF1A8,#FFD76A,#FFF8D8)",
+                        "linear-gradient(90deg,#FFF4CF,#F3E1B6,#FFFFFF)",
 
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
