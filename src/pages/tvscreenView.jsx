@@ -275,7 +275,7 @@ function TvScreen() {
           <Box
             sx={{
               height: "auto",
-              width: { xs: "40vw", sm: "22vw" },
+              width: { xs: "40vw", sm: "20vw" },
               marginBottom: { xs: "20px", sm: "0vw" },
             }}
           >
