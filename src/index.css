@@ -1,3 +1,119 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes borderTrailSpin {
+  from {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+
+  to {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
+.metal-panel--scoop {
+  --scoop-corner: clamp(18px, 1.5vw, 28px);
+  clip-path: polygon(
+    var(--scoop-corner) 0,
+    calc(100% - var(--scoop-corner)) 0,
+    100% var(--scoop-corner),
+    100% calc(100% - var(--scoop-corner)),
+    calc(100% - var(--scoop-corner)) 100%,
+    var(--scoop-corner) 100%,
+    0 calc(100% - var(--scoop-corner)),
+    0 var(--scoop-corner)
+  );
+}
+
+.border-trail {
+  border-radius: inherit;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+.border-trail::before {
+  aspect-ratio: 1;
+  content: "";
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  transform-origin: center;
+  animation: borderTrailSpin 4.8s linear infinite;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.border-trail--commodity {
+  opacity: 0.95;
+  padding: 1px;
+}
+
+.border-trail--commodity::before {
+  width: 170%;
+  background:
+    conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      transparent 230deg,
+      rgba(42, 142, 255, 0.08) 268deg,
+      rgba(84, 185, 255, 0.68) 292deg,
+      rgba(255, 255, 255, 0.96) 306deg,
+      rgba(255, 215, 120, 0.62) 316deg,
+      transparent 334deg,
+      transparent 360deg
+    );
+  filter: drop-shadow(0 0 8px rgba(91, 178, 255, 0.55));
+}
+
+.border-trail--silver-panel {
+  opacity: 0.98;
+  padding: 1.5px;
+}
+
+.border-trail--silver-panel::before {
+  width: 175%;
+  background:
+    conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      transparent 226deg,
+      rgba(120, 190, 255, 0.08) 264deg,
+      rgba(170, 218, 255, 0.68) 290deg,
+      rgba(255, 255, 255, 0.98) 306deg,
+      rgba(198, 214, 232, 0.64) 318deg,
+      transparent 336deg,
+      transparent 360deg
+    );
+  filter: drop-shadow(0 0 9px rgba(180, 220, 255, 0.6));
+}
+
+.border-trail--scoop {
+  border-radius: 0;
+  clip-path: polygon(
+    var(--scoop-corner) 0,
+    calc(100% - var(--scoop-corner)) 0,
+    100% var(--scoop-corner),
+    100% calc(100% - var(--scoop-corner)),
+    calc(100% - var(--scoop-corner)) 100%,
+    var(--scoop-corner) 100%,
+    0 calc(100% - var(--scoop-corner)),
+    0 var(--scoop-corner)
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .border-trail::before {
+    animation: none;
+  }
+}

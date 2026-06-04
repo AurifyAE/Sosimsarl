@@ -151,158 +151,140 @@ const CommodityTable = ({ title, items }) => {
   };
   // ❌ No data → don't render section
   if (!rows.length) return null;
-
   return (
-  <Box sx={{ width: "100%", overflow: "hidden" }}>
-  {/* HEADER */}
-  <Box
-    sx={{
-      display: "grid",
-      gridTemplateColumns: "1.4fr 0.8fr 0.8fr 0.8fr",
+    <Box sx={{ width: "100%", overflow: "hidden" }}>
+      {/* HEADER */}
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: "1.4fr 0.8fr 0.8fr 0.8fr",
 
-      py: {
-        xs: "14px",
-        md: "0.9vw",
-      },
+          py: {
+            xs: "14px",
+            md: "0.9vw",
+          },
 
-      px: {
-        xs: "16px",
-        md: "1.5vw",
-      },
+          px: {
+            xs: "16px",
+            md: "1.5vw",
+          },
 
-      alignItems: "center",
+          alignItems: "center",
 
-      borderRadius: {
-        xs: "18px",
-        md: "1.2vw",
-      },
+          borderRadius: {
+            xs: "18px",
+            md: "1.2vw",
+          },
 
-      position: "relative",
-      overflow: "hidden",
+          position: "relative",
+          overflow: "hidden",
 
-      background: `
-        linear-gradient(
-          145deg,
-          rgba(6,18,40,0.96) 0%,
-          rgba(10,38,78,0.92) 50%,
-          rgba(5,15,32,0.96) 100%
-        )
-      `,
-
-      border: "1px solid rgba(255,215,0,0.14)",
-
-      backdropFilter: "blur(14px)",
-
-      boxShadow: `
-        0 10px 30px rgba(0,0,0,0.45),
-        inset 0 1px 0 rgba(255,255,255,0.05),
-        0 0 25px rgba(59,164,255,0.08)
-      `,
-
-      margin: {
-        xs: "8px 0",
-        md: ".4vw 0",
-      },
-
-      "&::before": {
-        content: '""',
-        position: "absolute",
-        inset: 0,
-        padding: "1px",
-        borderRadius: "inherit",
-
-        background: `
+          background: `
           linear-gradient(
-            135deg,
-            rgba(255,255,255,0.10),
-            rgba(59,164,255,0.4),
-            rgba(255,215,0,0.35),
-            rgba(255,255,255,0.06)
+            145deg,
+            rgba(6,18,40,0.96) 0%,
+            rgba(10,38,78,0.92) 50%,
+            rgba(5,15,32,0.96) 100%
           )
         `,
 
-        WebkitMask: `
-          linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0)
-        `,
-
-        WebkitMaskComposite: "xor",
-        maskComposite: "exclude",
-
-        pointerEvents: "none",
-      },
-    }}
-  >
-    {["COMMODITY", "UNIT", "BUY AED", "SELL AED"].map((item, i) => (
-      <Typography
-        key={i}
-        sx={{
-          fontSize: {
-            xs: "12px",
-            lg: "1vw",
-            xl: "1.1vw",
-          },
-
-          fontWeight: 700,
-
-          letterSpacing: "0.12em",
-
-          color: "#DDE7FF",
-
-          textAlign: i >= 2 ? "center" : "start",
-
-          textTransform: "uppercase",
-        }}
-      >
-        {item}
-      </Typography>
-    ))}
-  </Box>
-
-  {/* TABLE BODY */}
-  <Box
-    sx={{
-      mt: "1vw",
-      maxHeight: { xs: "auto", sm: "20vw" },
-    }}
-  >
-    {rows.length === 0 ? (
-      <Typography
-        sx={{
-          py: "3vw",
-          textAlign: "center",
-
-          color: "rgba(255,215,120,0.45)",
-
-          fontSize: {
-            xs: "14px",
-            md: "1.2vw",
-          },
-        }}
-      >
-        No data available
-      </Typography>
-    ) : (
-      <Swiper
-        direction="vertical"
-        slidesPerView={5}
-        loop={true}
-        modules={[Autoplay]}
-        autoplay={{
-          delay: 0,
-          disableOnInteraction: false,
-        }}
-        speed={3000}
-        style={{
-          height: isMobile ? "35vw" : "20vw",
-
-          borderRadius: "1.2vw",
-
-          overflow: "hidden",
-
           backdropFilter: "blur(14px)",
 
-          background: `
+          boxShadow: `
+          0 10px 30px rgba(0,0,0,0.45),
+          inset 0 1px 0 rgba(255,255,255,0.05),
+          0 0 25px rgba(59,164,255,0.08)
+        `,
+
+          margin: {
+            xs: "8px 0",
+            md: ".4vw 0",
+          },
+
+        }}
+      >
+        {/* --- LIGHT TRAIL ANIMATION LAYER --- */}
+        <Box
+          className="border-trail border-trail--commodity"
+          sx={{
+            position: "absolute",
+            inset: 0,
+          }}
+        />
+        {["COMMODITY", "UNIT", "BUY AED", "SELL AED"].map((item, i) => (
+          <Typography
+            key={i}
+            sx={{
+              position: "relative",
+              zIndex: 2,
+              fontSize: {
+                xs: "12px",
+                lg: "1vw",
+                xl: "1.1vw",
+              },
+
+              fontWeight: 700,
+
+              letterSpacing: "0.12em",
+
+              color: "#DDE7FF",
+
+              textAlign: i >= 2 ? "center" : "start",
+
+              textTransform: "uppercase",
+            }}
+          >
+            {item}
+          </Typography>
+        ))}
+      </Box>
+
+      {/* TABLE BODY */}
+      <Box
+        sx={{
+          mt: "1vw",
+          maxHeight: { xs: "auto", sm: "20vw" },
+
+        }}
+      >
+
+        {rows.length === 0 ? (
+          <Typography
+            sx={{
+              py: "3vw",
+              textAlign: "center",
+
+              color: "rgba(255,215,120,0.45)",
+
+              fontSize: {
+                xs: "14px",
+                md: "1.2vw",
+              },
+            }}
+          >
+            No data available
+          </Typography>
+        ) : (
+          <Swiper
+            direction="vertical"
+            slidesPerView={5}
+            loop={true}
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+            }}
+            speed={3000}
+            style={{
+              height: isMobile ? "35vw" : "20vw",
+
+              borderRadius: "1.2vw",
+
+              overflow: "hidden",
+
+              backdropFilter: "blur(14px)",
+
+              background: `
             linear-gradient(
               145deg,
               rgba(6,18,40,0.96) 0%,
@@ -311,56 +293,69 @@ const CommodityTable = ({ title, items }) => {
             )
           `,
 
-          border: "1px solid rgba(255,215,0,0.14)",
+              border: "1px solid rgba(255,215,0,0.14)",
 
-          boxShadow: `
+              boxShadow: `
             0 10px 35px rgba(0,0,0,0.45),
             inset 0 1px 0 rgba(255,255,255,0.05),
             0 0 25px rgba(59,164,255,0.08)
           `,
-        }}
-      >
-        {rows.map((row, index) => (
-          <SwiperSlide key={index}>
+              position: "relative",
+              margin: {
+                xs: "8px 0",
+                md: ".4vw 0",
+              },
+            }}
+          >
+            {/* --- LIGHT TRAIL ANIMATION LAYER --- */}
             <Box
-              key={index}
+              className="border-trail border-trail--commodity"
               sx={{
-                display: "grid",
-                gridTemplateColumns: "1.4fr 0.8fr 0.8fr 0.8fr",
+                position: "absolute",
+                inset: 0,
+              }}
+            />
+            {rows.map((row, index) => (
+              <SwiperSlide key={index}>
+                <Box
+                  key={index}
+                  sx={{
+                    display: "grid",
+                    gridTemplateColumns: "1.4fr 0.8fr 0.8fr 0.8fr",
 
-                alignItems: "center",
+                    alignItems: "center",
 
-                py: {
-                  xs: "12px",
-                  md: ".9vw",
-                },
+                    py: {
+                      xs: "12px",
+                      md: ".9vw",
+                    },
 
-                px: {
-                  xs: "16px",
-                  md: "1.5vw",
-                },
+                    px: {
+                      xs: "16px",
+                      md: "1.5vw",
+                    },
 
-                height: "100%",
+                    height: "100%",
 
-                position: "relative",
+                    position: "relative",
 
-                transition: "all 0.25s ease",
+                    transition: "all 0.25s ease",
 
-                "&:hover": {
-                  background: "rgba(59,164,255,0.06)",
-                },
+                    "&:hover": {
+                      background: "rgba(59,164,255,0.06)",
+                    },
 
-                "&::after": {
-                  content: '""',
-                  position: "absolute",
+                    "&::after": {
+                      content: '""',
+                      position: "absolute",
 
-                  bottom: 0,
-                  left: "5%",
+                      bottom: 0,
+                      left: "5%",
 
-                  width: "90%",
-                  height: "1px",
+                      width: "90%",
+                      height: "1px",
 
-                  background: `
+                      background: `
                     linear-gradient(
                       to right,
                       transparent,
@@ -368,131 +363,131 @@ const CommodityTable = ({ title, items }) => {
                       transparent
                     )
                   `,
-                },
-              }}
-            >
-              {/* METAL */}
-              <Typography
-                sx={{
-                  fontSize: {
-                    xs: "13px",
-                    sm: "12px",
-                    lg: "1.15vw",
-                    xl: "1.2vw",
-                  },
-
-                  fontWeight: 800,
-
-                  color: "#FFFFFF",
-
-                  display: "grid",
-                  alignItems: "center",
-                  justifyContent: "start",
-
-                  gridTemplateColumns: "auto auto",
-
-                  textAlign: "start",
-
-                  lineHeight: "1",
-
-                  gap: {
-                    xs: "7px",
-                    lg: "0.35vw",
-                  },
-                }}
-              >
-                {row.metal_name ? row.metal_name : row.metal}
-
-                <Typography
-                  sx={{
-                    fontSize: {
-                      xs: "10px",
-                      sm: "10px",
-                      lg: "0.95vw",
                     },
-
-                    fontWeight: 500,
-
-                    color: "#8FB8FF",
-
-                    letterSpacing: "0.04em",
                   }}
                 >
-                  {row.purity}
-                </Typography>
-              </Typography>
+                  {/* METAL */}
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: "13px",
+                        sm: "12px",
+                        lg: "1.15vw",
+                        xl: "1.2vw",
+                      },
 
-              {/* UNIT */}
-              <Typography
-                sx={{
-                  fontSize: {
-                    xs: "13px",
-                    lg: "1.05vw",
-                    xl: "1.1vw",
-                  },
+                      fontWeight: 800,
 
-                  color: "rgba(255,255,255,0.82)",
+                      color: "#FFFFFF",
 
-                  fontWeight: 500,
+                      display: "grid",
+                      alignItems: "center",
+                      justifyContent: "start",
 
-                  textAlign: "start",
-                }}
-              >
-                {row.unit}
-              </Typography>
+                      gridTemplateColumns: "auto auto",
 
-              {/* BID */}
-              <Typography
-                sx={{
-                  fontSize: {
-                    xs: "14px",
-                    lg: "1.2vw",
-                    xl: "1.25vw",
-                  },
+                      textAlign: "start",
 
-                  fontWeight: 700,
+                      lineHeight: "1",
 
-                  textAlign: "center",
+                      gap: {
+                        xs: "7px",
+                        lg: "0.35vw",
+                      },
+                    }}
+                  >
+                    {row.metal_name ? row.metal_name : row.metal}
 
-                  background:
-                    "linear-gradient(90deg,#D7E7FF,#7DB4FF,#EAF2FF)",
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xs: "10px",
+                          sm: "10px",
+                          lg: "0.95vw",
+                        },
 
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                {formatPrice(row.bid)}
-              </Typography>
+                        fontWeight: 500,
 
-              {/* ASK */}
-              <Typography
-                sx={{
-                  fontSize: {
-                    xs: "14px",
-                    lg: "1.2vw",
-                    xl: "1.25vw",
-                  },
+                        color: "#8FB8FF",
 
-                  fontWeight: 700,
+                        letterSpacing: "0.04em",
+                      }}
+                    >
+                      {row.purity}
+                    </Typography>
+                  </Typography>
 
-                  textAlign: "center",
+                  {/* UNIT */}
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: "13px",
+                        lg: "1.05vw",
+                        xl: "1.1vw",
+                      },
 
-                  background:
-                    "linear-gradient(90deg,#FFF1A8,#FFD76A,#FFF8D8)",
+                      color: "rgba(255,255,255,0.82)",
 
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                {formatPrice(row.ask)}
-              </Typography>
-            </Box>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    )}
-  </Box>
-</Box>
+                      fontWeight: 500,
+
+                      textAlign: "start",
+                    }}
+                  >
+                    {row.unit}
+                  </Typography>
+
+                  {/* BID */}
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: "14px",
+                        lg: "1.2vw",
+                        xl: "1.25vw",
+                      },
+
+                      fontWeight: 700,
+
+                      textAlign: "center",
+
+                      background:
+                        "linear-gradient(90deg,#D7E7FF,#7DB4FF,#EAF2FF)",
+
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    {formatPrice(row.bid)}
+                  </Typography>
+
+                  {/* ASK */}
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: "14px",
+                        lg: "1.2vw",
+                        xl: "1.25vw",
+                      },
+
+                      fontWeight: 700,
+
+                      textAlign: "center",
+
+                      background:
+                        "linear-gradient(90deg,#FFF1A8,#FFD76A,#FFF8D8)",
+
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    {formatPrice(row.ask)}
+                  </Typography>
+                </Box>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
+      </Box>
+    </Box>
   );
 };
 
