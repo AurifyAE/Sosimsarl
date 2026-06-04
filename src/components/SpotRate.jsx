@@ -145,8 +145,8 @@ const MetalPanel = React.memo(({ data, bidDir, askDir, theme }) => {
         },
 
         gridTemplateColumns: {
-          xs: "1fr",
-          md: ".7fr 1fr 1fr",
+          xs: ".7fr 1fr 1fr",
+          sm: ".7fr 1fr 1fr",
         },
 
         transition: "all 0.35s ease",
