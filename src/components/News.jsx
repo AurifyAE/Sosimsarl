@@ -29,18 +29,18 @@ const NewsTicker = ({ newsItems = [] }) => {
         background: `
           linear-gradient(
             145deg,
-            rgba(6,18,40,0.96) 0%,
-            rgba(10,38,78,0.92) 50%,
-            rgba(5,15,32,0.96) 100%
+            rgba(16, 9, 0, 0.94) 0%,
+            rgba(78, 47, 5, 0.86) 50%,
+            rgba(16, 9, 0, 0.96) 100%
           )
         `,
 
-        border: "1px solid rgba(255,215,0,0.14)",
+        border: "1px solid rgba(255, 204, 92, 0.28)",
 
         boxShadow: `
           0 8px 30px rgba(0,0,0,0.45),
-          inset 0 1px 0 rgba(255,255,255,0.06),
-          0 0 25px rgba(59,164,255,0.08)
+          inset 0 1px 0 rgba(255,239,184,0.12),
+          0 0 25px rgba(255,174,31,0.12)
         `,
 
         "&::before": {
@@ -54,10 +54,10 @@ const NewsTicker = ({ newsItems = [] }) => {
           background: `
             linear-gradient(
               135deg,
-              rgba(255,255,255,0.10),
-              rgba(59,164,255,0.42),
-              rgba(255,215,0,0.32),
-              rgba(255,255,255,0.06)
+              rgba(255,239,184,0.16),
+              rgba(255,174,31,0.48),
+              rgba(128,77,0,0.42),
+              rgba(255,239,184,0.08)
             )
           `,
 
@@ -79,13 +79,13 @@ const NewsTicker = ({ newsItems = [] }) => {
           position: "relative",
           zIndex: 2,
 
-          color: "#fff",
+          color: "#FFE9A6",
 
           background: `
             linear-gradient(
               135deg,
-              rgba(16,40,82,0.98),
-              rgba(22,58,118,0.95)
+              rgba(45,25,0,0.98),
+              rgba(126,76,7,0.92)
             )
           `,
 
@@ -115,10 +115,10 @@ const NewsTicker = ({ newsItems = [] }) => {
 
           textTransform: "uppercase",
 
-          borderRight: "1px solid rgba(255,215,0,0.14)",
+          borderRight: "1px solid rgba(255,204,92,0.24)",
 
           boxShadow: `
-            0 0 20px rgba(59,164,255,0.10)
+            0 0 20px rgba(255,174,31,0.13)
           `,
         }}
       >
@@ -159,7 +159,7 @@ const NewsTicker = ({ newsItems = [] }) => {
               key={index}
               component="span"
               sx={{
-                color: "rgba(255,255,255,0.92)",
+                color: "rgba(255,244,207,0.92)",
 
                 fontSize: {
                   xs: "12px",

@@ -17,8 +17,8 @@ const getColors = (dir) => {
     };
   return {
     bgColor: "#F0F8FF00",
-    border: " 1px solid #FFFFFF",
-    color: "#fff",
+    border: " 1px solid rgba(255, 225, 150, 0.78)",
+    color: "#FFE9A6",
   };
 };
 
@@ -56,7 +56,7 @@ const PricePulse = ({ label, value, dir }) => {
             md: "1.5vw", // laptops
           },
           letterSpacing: "0.25vw",
-          color: "#fff",
+          color: "rgba(255, 239, 184, 0.78)",
         }}
       >
         {label}
@@ -81,6 +81,7 @@ const PricePulse = ({ label, value, dir }) => {
           borderRadius: "1vw",
           fontVariantNumeric: "tabular-nums",
           transition: "all 0.4s ease",
+          textShadow: "0 0 10px rgba(255, 196, 68, 0.26)",
         }}
       >
         {value}
@@ -111,22 +112,22 @@ const MetalPanel = React.memo(({ data, bidDir, askDir, theme }) => {
 
         backdropFilter: "blur(14px)",
 
-        // Premium Blue Theme
+        // Premium Gold Theme
         background: `
           linear-gradient(
             145deg,
-            rgba(5, 15, 35, 0.96) 0%,
-            rgba(10, 38, 78, 0.92) 45%,
-            rgba(6, 18, 42, 0.98) 100%
+            rgba(17, 9, 0, 0.96) 0%,
+            rgba(82, 49, 5, 0.88) 45%,
+            rgba(18, 10, 0, 0.98) 100%
           )
         `,
 
-        border: "1px solid rgba(255, 215, 0, 0.15)",
+        border: "1px solid rgba(255, 204, 92, 0.26)",
 
         boxShadow: `
           0 10px 35px rgba(0,0,0,0.45),
-          inset 0 1px 0 rgba(255,255,255,0.06),
-          0 0 20px rgba(58,140,255,0.12)
+          inset 0 1px 0 rgba(255,239,184,0.14),
+          0 0 22px rgba(255,174,31,0.13)
         `,
 
         padding: {
@@ -163,10 +164,10 @@ const MetalPanel = React.memo(({ data, bidDir, askDir, theme }) => {
           background: `
               linear-gradient(
                 135deg,
-                rgba(255,255,255,0.12),
-                rgba(59,164,255,0.45),
-                rgba(255,215,0,0.38),
-                rgba(255,255,255,0.08)
+                rgba(255,239,184,0.16),
+                rgba(255,174,31,0.46),
+                rgba(145,86,0,0.42),
+                rgba(255,239,184,0.08)
               )
             `,
 
@@ -192,7 +193,7 @@ const MetalPanel = React.memo(({ data, bidDir, askDir, theme }) => {
 
           borderRadius: "50%",
 
-          background: "rgba(0,140,255,0.10)",
+          background: "rgba(255,174,31,0.12)",
           filter: "blur(80px)",
 
           top: "-40%",
@@ -261,7 +262,7 @@ const MetalPanel = React.memo(({ data, bidDir, askDir, theme }) => {
             mt: "0.4vw",
 
             background: isSilver
-              ? "linear-gradient(90deg,#D9E7FF,#8FB8FF,#FFFFFF)"
+              ? "linear-gradient(90deg,#F7E6B5,#D9B96F,#FFFFFF)"
               : "linear-gradient(90deg,#FFF2A6,#FFD66B,#FFF7D6)",
 
             WebkitBackgroundClip: "text",
@@ -284,7 +285,7 @@ const MetalPanel = React.memo(({ data, bidDir, askDir, theme }) => {
             lg: "1vw",
           },
 
-          color: "#fff",
+          color: "#FFF4CF",
           fontWeight: 700,
           zIndex: 2,
         }}
@@ -295,7 +296,7 @@ const MetalPanel = React.memo(({ data, bidDir, askDir, theme }) => {
           sx={{
             mt: "0.35vw",
             textAlign: "center",
-            color: "rgba(255,255,255,0.72)",
+            color: "rgba(255,239,184,0.72)",
 
             fontWeight: 600,
             letterSpacing: "0.08em",
@@ -305,7 +306,7 @@ const MetalPanel = React.memo(({ data, bidDir, askDir, theme }) => {
           <span
             className="hl-value-low"
             style={{
-              color: "#69AFFF",
+              color: "#F3C766",
               fontWeight: 800,
             }}
           >
@@ -335,7 +336,7 @@ const MetalPanel = React.memo(({ data, bidDir, askDir, theme }) => {
           sx={{
             mt: "0.35vw",
             textAlign: "center",
-            color: "rgba(255,255,255,0.72)",
+            color: "rgba(255,239,184,0.72)",
 
             fontWeight: 600,
             letterSpacing: "0.08em",

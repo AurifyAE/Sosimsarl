@@ -13,6 +13,10 @@ const PoweredByAurify = () => {
         justifyContent: "center",
         gap: "0.6vw",
         padding: "0.8vw 1.4vw",
+        // borderRadius: "999px",
+        // border: "1px solid rgba(255, 204, 92, 0.16)",
+        // background:
+        //   "linear-gradient(90deg, transparent, rgba(255, 189, 57, 0.08), transparent)",
         // margin: "0 auto",
       }}
     >
@@ -25,13 +29,15 @@ const PoweredByAurify = () => {
           fontSize: { xs: "15px", md: "1.2vw" },
 
           fontWeight: 500,
-          color: "#fff",
+          color: "rgba(255, 239, 184, 0.76)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           gap: "0.5vw",
           whiteSpace: "nowrap",
           letterSpacing: "0.05em",
+          textDecoration: "none",
+          textShadow: "0 0 8px rgba(255, 185, 49, 0.18)",
         }}
       >
         Powered by

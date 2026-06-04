@@ -66,14 +66,14 @@
       from 0deg,
       transparent 0deg,
       transparent 230deg,
-      rgba(42, 142, 255, 0.08) 268deg,
-      rgba(84, 185, 255, 0.68) 292deg,
+      rgba(255, 174, 31, 0.10) 268deg,
+      rgba(255, 204, 92, 0.72) 292deg,
       rgba(255, 255, 255, 0.96) 306deg,
       rgba(255, 215, 120, 0.62) 316deg,
       transparent 334deg,
       transparent 360deg
     );
-  filter: drop-shadow(0 0 8px rgba(91, 178, 255, 0.55));
+  filter: drop-shadow(0 0 8px rgba(255, 185, 49, 0.58));
 }
 
 .border-trail--silver-panel {
@@ -88,14 +88,14 @@
       from 0deg,
       transparent 0deg,
       transparent 226deg,
-      rgba(120, 190, 255, 0.08) 264deg,
-      rgba(170, 218, 255, 0.68) 290deg,
+      rgba(255, 174, 31, 0.10) 264deg,
+      rgba(255, 210, 94, 0.70) 290deg,
       rgba(255, 255, 255, 0.98) 306deg,
-      rgba(198, 214, 232, 0.64) 318deg,
+      rgba(217, 185, 111, 0.66) 318deg,
       transparent 336deg,
       transparent 360deg
     );
-  filter: drop-shadow(0 0 9px rgba(180, 220, 255, 0.6));
+  filter: drop-shadow(0 0 9px rgba(255, 196, 68, 0.62));
 }
 
 .border-trail--scoop {

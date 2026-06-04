@@ -182,9 +182,9 @@ const CommodityTable = ({ title, items }) => {
           background: `
           linear-gradient(
             145deg,
-            rgba(6,18,40,0.96) 0%,
-            rgba(10,38,78,0.92) 50%,
-            rgba(5,15,32,0.96) 100%
+            rgba(16,9,0,0.96) 0%,
+            rgba(78,47,5,0.88) 50%,
+            rgba(16,9,0,0.98) 100%
           )
         `,
 
@@ -192,8 +192,8 @@ const CommodityTable = ({ title, items }) => {
 
           boxShadow: `
           0 10px 30px rgba(0,0,0,0.45),
-          inset 0 1px 0 rgba(255,255,255,0.05),
-          0 0 25px rgba(59,164,255,0.08)
+          inset 0 1px 0 rgba(255,239,184,0.12),
+          0 0 25px rgba(255,174,31,0.12)
         `,
 
           margin: {
@@ -227,7 +227,7 @@ const CommodityTable = ({ title, items }) => {
 
               letterSpacing: "0.12em",
 
-              color: "#DDE7FF",
+              color: "#FFE9A6",
 
               textAlign: i >= 2 ? "center" : "start",
 
@@ -287,18 +287,18 @@ const CommodityTable = ({ title, items }) => {
               background: `
             linear-gradient(
               145deg,
-              rgba(6,18,40,0.96) 0%,
-              rgba(10,38,78,0.92) 50%,
-              rgba(5,15,32,0.96) 100%
+              rgba(16,9,0,0.96) 0%,
+              rgba(78,47,5,0.88) 50%,
+              rgba(16,9,0,0.98) 100%
             )
           `,
 
-              border: "1px solid rgba(255,215,0,0.14)",
+              border: "1px solid rgba(255,204,92,0.24)",
 
               boxShadow: `
             0 10px 35px rgba(0,0,0,0.45),
-            inset 0 1px 0 rgba(255,255,255,0.05),
-            0 0 25px rgba(59,164,255,0.08)
+            inset 0 1px 0 rgba(255,239,184,0.12),
+            0 0 25px rgba(255,174,31,0.12)
           `,
               position: "relative",
               margin: {
@@ -342,7 +342,7 @@ const CommodityTable = ({ title, items }) => {
                     transition: "all 0.25s ease",
 
                     "&:hover": {
-                      background: "rgba(59,164,255,0.06)",
+                      background: "rgba(255, 189, 57, 0.08)",
                     },
 
                     "&::after": {
@@ -378,7 +378,7 @@ const CommodityTable = ({ title, items }) => {
 
                       fontWeight: 800,
 
-                      color: "#FFFFFF",
+                      color: "#FFF4CF",
 
                       display: "grid",
                       alignItems: "center",
@@ -408,7 +408,7 @@ const CommodityTable = ({ title, items }) => {
 
                         fontWeight: 500,
 
-                        color: "#8FB8FF",
+                        color: "#D9B96F",
 
                         letterSpacing: "0.04em",
                       }}
@@ -426,7 +426,7 @@ const CommodityTable = ({ title, items }) => {
                         xl: "1.1vw",
                       },
 
-                      color: "rgba(255,255,255,0.82)",
+                      color: "rgba(255,239,184,0.78)",
 
                       fontWeight: 500,
 
@@ -450,7 +450,7 @@ const CommodityTable = ({ title, items }) => {
                       textAlign: "center",
 
                       background:
-                        "linear-gradient(90deg,#D7E7FF,#7DB4FF,#EAF2FF)",
+                        "linear-gradient(90deg,#FFF4CF,#D9B96F,#FFFFFF)",
 
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",

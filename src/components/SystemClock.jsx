@@ -58,8 +58,17 @@ const SystemClock = () => {
           justifyContent: "center",
           gap: "1vw",
           width: "100%",
-          padding: "0vw 2.5vw",
-          borderRadius: "20px",
+          padding: {
+            xs: "8px 18px",
+            md: "0.45vw 2.5vw",
+          },
+          // borderRadius: "20px",
+          // border: "1px solid rgba(255, 204, 92, 0.22)",
+          // background:
+          //   "linear-gradient(135deg, rgba(18, 10, 0, 0.56), rgba(82, 49, 4, 0.34), rgba(18, 10, 0, 0.62))",
+          // boxShadow:
+          //   "inset 0 1px 0 rgba(255,239,184,0.14), 0 0 18px rgba(255,174,31,0.08)",
+          // backdropFilter: "blur(10px)",
         }}
       >
         {/* Date */}
@@ -71,7 +80,8 @@ const SystemClock = () => {
             },
             fontWeight: 400,
             letterSpacing: "2px",
-            color: "#fff",
+            color: "#FFE9A6",
+            textShadow: "0 0 10px rgba(255, 196, 68, 0.34)",
           }}
         >
           {timeData.date || "-- --- ----"}
@@ -83,7 +93,7 @@ const SystemClock = () => {
               xs: "12px",
               sm: "1vw",
             },
-            color: "#fff",
+            color: "rgba(255, 239, 184, 0.74)",
             letterSpacing: "2px",
           }}
         >

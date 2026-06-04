@@ -203,12 +203,12 @@ function TvScreen() {
     <Box
       sx={{
         minHeight: "100dvh",
-        color: "white",
+        color: "#FFF4CF",
         pb: { xs: "0", md: "3vw" },
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#000",
+        backgroundColor: "#090500",
       }}
     >
       <Box
@@ -220,6 +220,8 @@ function TvScreen() {
           width: "100%", // better than %
           pointerEvents: "none",
           overflow: "hidden",
+          background:
+            "radial-gradient(circle at 70% 45%, rgba(190, 118, 0, 0.22), transparent 42%), #090500",
         }}
       >
         <Box
@@ -230,6 +232,7 @@ function TvScreen() {
             height: "100%",
             width: "100%",
             objectFit: "cover",
+            filter: "saturate(1.12) contrast(1.08) brightness(0.82)",
           }}
         />
       </Box>
@@ -253,8 +256,8 @@ function TvScreen() {
 
         {/* Side: SpotRate & Date Time */}
         <Grid xs={12} md={6} padding="1vw" gap="1vw" display="grid">
-          <WorldClockHorizontal />
           <SystemClock />
+          <WorldClockHorizontal />
           <SpotRate />
 
           <PoweredByAurify />

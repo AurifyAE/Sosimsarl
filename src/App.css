@@ -1,8 +1,9 @@
 body {
-  background-color: #140b10;
+  background-color: #090500;
   background-size: cover;
   height: 100vh;
   padding: "50px 50px";
+  color: #fff4cf;
 }
 
 #root {
@@ -31,7 +32,7 @@ body {
 }
 
 .read-the-docs {
-  color: #888;
+  color: #b88a32;
 }
 
 /* DeviceRestriction.css */
@@ -43,11 +44,11 @@ body {
   margin: auto;
   padding: 20px;
   font-size: 18px;
-  color: #ff0000;
+  color: #f5c76b;
   /* Red color for visibility */
-  background-color: #ffffff;
+  background-color: #120b02;
   /* White background */
-  border: 2px solid #ff0000;
+  border: 2px solid #c99a42;
   /* Red border */
 }
 
