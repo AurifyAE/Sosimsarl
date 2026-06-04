@@ -187,6 +187,7 @@ const CommodityTable = ({ title, items }) => {
             rgba(16,9,0,0.98) 100%
           )
         `,
+          border: "1px solid rgba(255,204,92,0.24)",
 
           backdropFilter: "blur(14px)",
 
