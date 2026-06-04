@@ -211,7 +211,7 @@ function TvScreen() {
         backgroundColor: "#090500",
       }}
     >
-      <Box
+      {/* <Box
         sx={{
           position: "fixed",
           left: "00%",
@@ -235,7 +235,7 @@ function TvScreen() {
             filter: "saturate(1.12) contrast(1.08) brightness(0.82)",
           }}
         />
-      </Box>
+      </Box> */}
 
       {/* Grid */}
 
