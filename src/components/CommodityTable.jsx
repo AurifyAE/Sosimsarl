@@ -374,7 +374,7 @@ const CommodityTable = ({ title, items }) => {
                         xs: "13px",
                         sm: "12px",
                         lg: "1.15vw",
-                        xl: "1.2vw",
+                        xl: "1.3vw",
                       },
 
                       fontWeight: 800,

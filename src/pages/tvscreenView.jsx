@@ -259,7 +259,6 @@ function TvScreen() {
           <SystemClock />
           <WorldClockHorizontal />
           <SpotRate />
-
           <PoweredByAurify />
         </Grid>
         <Grid
@@ -275,7 +274,7 @@ function TvScreen() {
           <Box
             sx={{
               height: "auto",
-              width: { xs: "40vw", sm: "28vw" },
+              width: { xs: "40vw", sm: "28vw",xl: "32vw" },
               marginBottom: { xs: "20px", sm: "0vw" },
             }}
           >

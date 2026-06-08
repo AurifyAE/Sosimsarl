@@ -134,6 +134,7 @@ const MetalPanel = React.memo(({ data, bidDir, askDir, theme }) => {
           xs: "18px",
           sm: "1vw 1.6vw",
           md: "1.2vw",
+          xl: "1.7vw 1vw",
         },
 
         display: "grid",
@@ -230,11 +231,15 @@ const MetalPanel = React.memo(({ data, bidDir, askDir, theme }) => {
             width: {
               xs: "58px",
               md: "4.2vw",
+              xl: "4.5vw",
+
             },
 
             height: {
               xs: "58px",
               md: "4.2vw",
+              xl: "4.5vw",
+
             },
 
             objectFit: "contain",
@@ -253,6 +258,7 @@ const MetalPanel = React.memo(({ data, bidDir, askDir, theme }) => {
             fontSize: {
               xs: "14px",
               md: "1.3vw",
+              xl: "1.7vw",
             },
 
             fontWeight: 800,
@@ -282,7 +288,7 @@ const MetalPanel = React.memo(({ data, bidDir, askDir, theme }) => {
             xs: "15px",
             sm: "2vw",
             md: "1.2vw",
-            lg: "1vw",
+            lg: "1.5vw",
           },
 
           color: "#FFF4CF",
@@ -322,7 +328,7 @@ const MetalPanel = React.memo(({ data, bidDir, askDir, theme }) => {
             xs: "15px",
             sm: "2vw",
             md: "1.2vw",
-            lg: "1vw",
+            lg: "1.5vw",
           },
 
           color: "#fff",
